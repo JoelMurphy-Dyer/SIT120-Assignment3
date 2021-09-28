@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Cherry Cream Soda;
+}
+/* Styling for the body of the page */
+html, body {
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+    color: black;
+}
+/* Creating a container */
+.menu .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+/* The container style */
+.menu .box-container .box{
+    background: #f2f2f2;
+    width: 40rem;
+    height: 20rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+    text-align: center;
+}
+/* The thank you gif */
+.stitch {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#cont{
+    min-height: 7%;
+    background: #f2f2f2;
+    display: none;
+} 
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+#footer{
+    background-color: #1e232b;
+    padding: 5 5 0 5;
+    position: relative;
+    height: 100px;
+    clear: both;
+}
+#footer .content{
+    margin: 5px;
+    color: white;
+    padding: 5 5 0 5;
+    font-size: 13px;
+    text-align: center;
+}
+#footer p{
+    color: white;
+    font-size: 10;
+    padding: 5 5 0 5;
+    text-align: center;
+}
+

@@ -1,0 +1,105 @@
+/* The border for the page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Cherry Cream Soda;
+}
+
+/* This is the background for the page */
+html, body{
+    background: #c4c4c4;
+    min-height: 100vh;
+} 
+
+
+/* This is the style for th whole box of the form */
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgba(254,236,164,1); 
+}
+
+/* Style for the h2 headings in the form */
+.wrapper h2{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+
+/* The margin from the bottom of the wrapper of the input fields */
+.wrapper .input_field{
+    margin-bottom: 10px; 
+}
+
+/* This is the styling for the placeholders in all the boxes */
+.wrapper .input_field input[type="text"], 
+.wrapper textarea{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+/* Adding text size to the placeholder "messsage" */
+.wrapper textarea{
+    height: 80px;
+    resize: none;
+}
+
+/* This is the style for the .btn and the submit button in the form to make it look neat */
+.wrapper .btn input[type="submit"]{
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #fece0c;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* This is the style of the footer on how far it appears on the page */
+#cont{
+    min-height: 100%;
+    background: #f2f2f2;
+    display: none; 
+} 
+/* This is also the style for the footer but just adds a overlay and padding */
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+/* This is the footer box style */
+#footer{
+    background-color: #1e232b;
+    padding: 5 5 0 5;
+    position: sticky;
+    top: 100%;
+    height: 100px;
+    clear: both; 
+}
+/* This is the styling for the content inside of the footer e.g., Phone, envelope and map */
+#footer .content{
+    margin: 5px;
+    color: white;
+    padding: 5 5 0 5;
+    font-size: 13px;
+    text-align: center;
+}
+/* This is the text styling for the copyright text in html it is the <p> tag */
+#footer p{
+    color: white;
+    font-size: 10;
+    padding: 5 5 0 5;
+    text-align: center;
+}

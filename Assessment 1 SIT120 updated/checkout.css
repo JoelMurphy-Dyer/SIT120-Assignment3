@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Cherry Cream Soda;
+}
+/* Styling for the page */
+html, body {
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+    color: black;
+  }
+/* Style for the back button */
+.top-bar {
+    text-align: left;
+}
+/* The styling for the tag <label> */
+label {
+    display:inline-block;
+    width:75px;
+}
+/* Delivery address tet width */
+.dasame {
+    width: 300px;
+}
+
+/* The styling for the textbox in the billing information */
+.text_field input[type="text"] {
+    width: 50%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+/* The styling for expirary date and CVV*/
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+/* box for all the content */
+  .col-50 {
+    -ms-flex: 50%; 
+    flex: 50%;
+  }
+/* Padding between each piece of content */
+  .col-50 {
+    padding: 0 16px;
+  }
+  /* THe text style */
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* All the styling for the tag <label> */
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+/* The styling for payment images */
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+/* Style for the payment button*/
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+/* Change of colour when hovering over the button */
+.btn:hover {
+    background-color: #45a049;
+}
+  
+  /* Responsive layout, when the screen is less than 800px wide */
+@media (max-width: 800px) {
+.row {
+    flex-direction: column-reverse;
+}
+.col-25 {
+    margin-bottom: 20px;
+}
+}
+/* Footer */
+#cont{
+    min-height: 10%;
+    background: #f2f2f2;
+    display: none;
+} 
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+#footer{
+    background-color: #1e232b;
+    padding: 5 5 0 5;
+    position: relative;
+    height: 100px;
+    /* margin-top: -100px; */
+    clear: both;
+}
+#footer .content{
+    margin: 5px;
+    color: white;
+    padding: 5 5 0 5;
+    font-size: 13px;
+    /* line-height: 10px;  */
+    text-align: center;
+}
+#footer p{
+    color: white;
+    font-size: 10;
+    padding: 5 5 0 5;
+    text-align: center;
+}
+

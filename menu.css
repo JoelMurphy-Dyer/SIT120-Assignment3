@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Cherry Cream Soda;
+}
+/* Background of the page */
+html, body{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+    height: 10%;  
+    background: #f2f2f2;
+}
+/* Footer */
+#cont{
+    min-height: 10%;
+    background: #f2f2f2;
+    display: none;
+} 
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+#footer{
+    background-color: #1e232b;
+    padding: 5 5 0 5;
+    position: relative;
+    height: 100px;
+    clear: both;
+}
+#footer .content{
+    margin: 5px;
+    color: white;
+    padding: 5 5 0 5;
+    font-size: 13px;
+    text-align: center;
+}
+#footer p{
+    color: white;
+    font-size: 10;
+    padding: 5 5 0 5;
+    text-align: center;
+}
+/* This is the button for the cart */
+.button{
+    width: 3rem;
+    height: 1.2rem;
+    cursor: pointer;
+    margin: .5rem;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Styling the cart */
+.cart{
+    background: #fff;
+    border-radius: 1rem;
+    color: #fdbb2d;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: .2rem solid;
+}
+/* The cart image */
+.cart i{
+    position: absolute;
+    margin-left: 2.5rem;
+    column-fill: transparent;
+    transition: 400ms;
+    color: transparent;
+}
+/* Transition when hovering over the cart */
+.cart span{
+    transition: 400ms;
+}
+
+.cart:hover span{
+    margin-right: 1.8rem;
+}
+
+.cart:hover i{
+    margin-left: 2.2rem;
+    column-fill: white;
+    color: #fdbb2d;
+}
+
+.fa-shopping-cart .cart{
+        position: absolute;
+        right: 50px;
+}
+
+/* The focus on when you hover your mouse over */
+button:focus{
+    outline: none;
+}
+/* Gradient */
+.menu{
+    background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* These following styles are for the box */
+.menu .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Container to make the box */
+.menu .box-container .box{
+    background: #fff;
+    width: 35rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+    text-align: center;
+}
+/* Style for the container */
+.menu .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+/* The heading in the box */
+.menu .box-container .box h3{
+    color: #333;
+    font-size: 3rem;
+    font-weight: normal;
+}
+/* The paragraph in the box */
+.menu .box-container .box p{
+    color: #333;
+    font-size: .9rem;
+    font-weight: normal;
+}
+/* The five stars in the box */
+.menu .box-container .box .stars{
+    color: #ffaa4a;
+    font-size: 2rem;
+    padding: 1rem .1rem;
+}
+/* The price */
+.menu .box-container .box .price{
+    color: #666;
+    font-size: 2.5rem;
+}
+/* The hover for the box*/
+.menu .box-container .box:hover{
+    transform: scale(1.02);
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+}
+/* The style for the stars when there is no value */
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+}
+/* Style for the star */
+.star-rating {
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 1.5em;
+    color: #ABABAB;
+    transition: color .2s ease-out;
+}
+/* Cursor hver */
+.star-rating:hover {
+    cursor: pointer;
+}
+/* Colour when star is selcted */
+.is-selected {
+    color: #FFD700;
+}
+/* cursor */
+.is-disabled:hover {
+    cursor: default;
+}
+/* The star box */
+.star-rating__checkbox{
+    display: none;
+    visibility: none;
+    opacity: 0;
+}
+/*  Media for quantity selector in 500px  */
+@media (max-width: 500px){
+
+    html{
+        font-size: 50%; 
+    }
+
+section{
+    padding: 1rem 5%;
+    padding-top: 8.5rem;
+  }
+}
+
+#quantity {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+  
+pre {
+    background: #eee;
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+.quantity-toggle {
+    display: flex;
+}
+.input {
+      border: 0;
+      border-top: border;
+      border-bottom: border;
+      width: 2.5rem;
+      text-align: center;
+      padding: 0 .5rem;
+}
+    
+button {
+      border: border;
+      padding: .5rem;
+      background: #f5f5f5;
+      color: #888;
+      font-size: 1rem;
+      cursor: pointer;
+}

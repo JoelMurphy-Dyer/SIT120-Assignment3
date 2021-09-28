@@ -1,0 +1,104 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry+Cream Soda&display=swap">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="feedback.css">
+        <link rel="stylesheet" href="deals.css">
+        <script src="main.js"></script>
+        <script src="https://unpkg.com/vue@2.0.0/dist/vue.js"></script>
+        <script>"https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script rel="stylesheet" src="https://kit.fontawesome.com/b1733a25f4.js"></script>
+    </head>
+
+    <!--- This is the navigation bar and it includes the bar symbol in when the screen is minimized--->
+<body>
+    <nav>
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo">Disney Foods</div>
+        <div class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="feedback.html">Contact Page</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </div>
+      
+        <!--- This is the search icon--->
+ <div class="search-icon"><span class="fas fa-search"></span></div>
+ <div class="cancel-icon"><span class="fas fa-times"></span></div>
+ <form action="#">
+     <input type="search" class="search-data"  placeholder="Search" required>
+     <button type="submit" class="fas fa-search"></button>
+ </form>
+ <script>
+     const menuBtn = document.querySelector(".menu-icon span");  
+       const searchBtn = document.querySelector(".search-icon");
+       const cancelBtn = document.querySelector(".cancel-icon");
+       const items = document.querySelector(".nav-items");
+       const form = document.querySelector("form");
+ menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+     }
+ cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#add8e6";
+     }
+ searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+     }
+     </script>
+     </nav>
+
+<!-- This is the block id's for the footer -->
+<div id="cont">
+    <div id="main">
+    </div>
+</div>
+
+<!--- This is the for the content inside the footer--->
+<footer id="footer">
+    <div class="center box">
+<!-- This is the map icon and the information -->
+        <div class="content">
+        <div class="Place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">Disney Foods, Australia</span>
+    </div>
+
+<!-- The phone logo and number in the footer -->
+        <div class="Phone">
+        <span class="fas fa-phone-alt"></span>
+            <span class="text">+0444444444</span>
+</div>
+
+<!-- Email logo and information in the footer -->
+    <div class="Email">
+    <span class="fas fa-envelope"></span>
+    <span class="text">DisneyFoods@disneyfoods.com</span>
+</div>
+</div>
+</div>
+
+<!-- Copyright logo and content in the footer -->
+<p>DisneyFoods.com | Designed by Joel Murphy-Dyer &copy; 2021</p>
+</footer>
+
+</body>
+<script rel="JavaScript" src="deals.js"></script>
+</html>
+
+</body>
+</html>

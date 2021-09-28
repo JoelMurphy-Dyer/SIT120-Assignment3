@@ -1,0 +1,180 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry+Cream Soda&display=swap">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="feedback.css">
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script rel="stylesheet" src="https://kit.fontawesome.com/b1733a25f4.js"></script>
+    </head>
+
+    <!--- This is the navigation bar and it includes the bar symbol in when the screen is minimized--->
+<body>
+    <nav>
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo">Disney Foods</div>
+        <div class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="feedback.html">Contact Page</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </div>
+
+
+     <!--- This is the search icon--->
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data"  placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+        <script>
+            const menuBtn = document.querySelector(".menu-icon span");  
+              const searchBtn = document.querySelector(".search-icon");
+              const cancelBtn = document.querySelector(".cancel-icon");
+              const items = document.querySelector(".nav-items");
+              const form = document.querySelector("form");
+        menuBtn.onclick = ()=>{
+             items.classList.add("active");
+             menuBtn.classList.add("hide");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+            }
+        cancelBtn.onclick = ()=>{
+             items.classList.remove("active");
+             menuBtn.classList.remove("hide");
+             searchBtn.classList.remove("hide");
+             cancelBtn.classList.remove("show");
+             form.classList.remove("active");
+             cancelBtn.style.color = "#add8e6";
+            }
+        searchBtn.onclick = ()=>{
+             form.classList.add("active");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+            }
+            </script>
+            </nav>
+            
+<!--- This is all the code for the menu tab of the website --->
+<section class="menu" id="menu">
+
+<!--- This is the heading of the page --->
+<h1 class="heading"> Disney Foods Menu</h1> 
+
+<!-- Container for the menu -->
+<div class="box-container">
+
+    <!-- Menu item one -->
+    <div class="box">
+          <img class="image" src="images/pasta.gif" alt="">
+          <h3>Remy’s Ratatouille (V)</h3>
+          <p>Remy’s Ratatouille, this iconic food moment where the undefeated food critic, Anton Ego, is transported back to his childhood, is remembered by everyone. The uniqueness of the dish and the piquant flavor comes from the nature of the dish, which is a vegetable stew, giving out the flavors of every vegetable and herbs, along with a simmering and creamy texture.</p>
+          <br>
+          <!-- Star rating -->
+          <div id="app1">
+          <p>Rate this meal</p>
+          <star-rating></star-rating>
+          <br>
+          <div class="price">$15</div>
+          <div id="amount">
+            <!-- Quantity selection -->
+            <div class="quant">
+            <quantity></quantity>
+            </div>
+          </div>
+          <br>
+      <!--- This is in all the menu items and it is the cart that shows up when you click add to cart --->
+        <button
+            class="cart">
+            <span>add to cart</span>
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        </button>
+        </div>
+        </div>
+  <!-- Menu item two -->
+        <div class="box">
+            <img src="images/alice cookies.gif" alt="">
+            <h3>Eat Me Cookies from “Alice In The Wonderland” (V)</h3>
+            <p>The magical cookies from Alice in Wonderland that let Alice grow in size.</p>
+            <br>
+            <!-- Star rating -->
+            <div id="app2">
+            <p>Rate this meal</p>
+            <star-rating></star-rating>
+            <br>
+            <div class="price">$12</div>
+            <div id="amount2">
+              <!-- Quantity selection -->
+            <quantity></quantity>
+            <br>
+            <button
+                class="cart">
+                <span>add to cart</span>
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </button>
+            </div>
+            </div>
+            </div>
+      <!-- Menu item three -->
+            <div class="box">
+            <img src="images/Incredibles waffles.gif" alt="">
+            <h3>Bob's amazing waffles (V)</h3>
+            <p>When you need a meal for the kids this is the perfect main. You can always trust Bob's waffles to make the kids happy.</p>
+            <br>
+            <!-- Star rating -->
+            <div id="app">
+              <p>Rate this meal</p>
+              <star-rating></star-rating>
+            <br>
+            <div class="price">$12</div>
+            <div id="amount3">
+              <!-- Quantity selection -->
+              <quantity></quantity>
+            </div>
+            <br>
+            <button
+                class="cart">
+                <span>add to cart</span>
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+    </section>
+
+
+<!-- Footer ID's-->
+</section>
+<div id="cont">
+  <div id="main">
+
+  </div>
+</div>
+<!--- Footer --->
+<footer id="footer">
+  <div class="center box">
+      <div class="content">
+      <div class="Place">
+      <span class="fas fa-map-marker-alt"></span>
+      <span class="text">Disney Foods, Australia</span>
+  </div>
+      <div class="Phone">
+      <span class="fas fa-phone-alt"></span>
+          <span class="text">+0444444444</span>
+</div>
+  <div class="Email">
+  <span class="fas fa-envelope"></span>
+  <span class="text">DisneyFoods@disneyfoods.com</span>
+</div>
+</div>
+</div>
+<p>DisneyFoods.com | Designed by Joel Murphy-Dyer &copy; 2021</p>
+</footer>
+</body>
+<script src="menu.js"></script>
+</html>

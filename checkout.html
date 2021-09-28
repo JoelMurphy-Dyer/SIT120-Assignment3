@@ -1,0 +1,226 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cart</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry+Cream Soda&display=swap">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="feedback.css">
+        <link rel="stylesheet" href="checkout.css">
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script rel="stylesheet" src="https://kit.fontawesome.com/b1733a25f4.js"></script>
+    </head>
+
+    <!--- This is the navigation bar and it includes the bar symbol in when the screen is minimized--->
+<body>
+     <!-- This is the navigation bar -->
+     <nav>
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo">Disney Foods</div>
+        <div class=candles></div>
+        <div class="nav-items">
+   
+    <!-- This links all the pages together it is the options in the navigation bar -->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="about us.html">About Us</a></li>
+    <li><a href="feedback.html">Contact Page</a></li>
+    <li><a href="cart.html">Cart</a></li>
+
+    <!-- This is the search icon for in the navigation bar -->
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data"  placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+        <script>
+            const menuBtn = document.querySelector(".menu-icon span");  
+              const searchBtn = document.querySelector(".search-icon");
+              const cancelBtn = document.querySelector(".cancel-icon");
+              const items = document.querySelector(".nav-items");
+              const form = document.querySelector("form");
+        menuBtn.onclick = ()=>{
+             items.classList.add("active");
+             menuBtn.classList.add("hide");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+            }
+        cancelBtn.onclick = ()=>{
+             items.classList.remove("active");
+             menuBtn.classList.remove("hide");
+             searchBtn.classList.remove("hide");
+             cancelBtn.classList.remove("show");
+             form.classList.remove("active");
+             cancelBtn.style.color = "#add8e6";
+            }
+        searchBtn.onclick = ()=>{
+             form.classList.add("active");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+            }
+            </script>
+</nav>
+
+<!-- Back button -->
+<ul class="top">
+    <li><a class="top-bar" href="cart.html">Back</a></li>
+</ul>
+</div>
+<br>
+<!-- header for the 'cart' on the webpage -->
+<div id="head">
+<h1 v-html="header">
+{{ header }}
+</h1>
+</div>
+<br>
+
+<!-- Billing address -->
+<form id="checkout">
+    <fieldset>
+        <br>
+      <legend>Billing Address</legend>
+      
+      <p>
+        <label for="baname">Full Name</label>
+        <input id="baname" v-model="billing_address.name">
+      </p>
+
+      <p>
+        <label for="bastreet">Street</label>
+        <input id="bstreet" v-model="billing_address.street">
+      </p>
+      
+      <p>
+        <label for="bacity">City</label>
+        <input id="bacity" v-model="billing_address.city">
+      </p>
+      
+      <p>
+        <label for="bastate">State</label>
+        <select id="bastate" v-model="billing_address.state">
+          <option value="vi">Victoria</option>
+        </select>
+      </p>
+  
+      <p>
+        <label for="bapost">Postcode</label>
+        <input id="bapost" v-model="billing_address.Postcode">
+      </p>
+  
+    </fieldset>
+  <!-- Delivery address -->
+    <fieldset>
+        <br>
+      <legend>Delivery Address</legend>
+      
+      <input type="checkbox" @change="copyBilling" id="daddress" v-model="daddress"> <label for="daddress" class="dasame">Shipping Same as Billing</label><br/>
+      <br>
+      <p>
+        <label class="fname" for="daname">Full Name</label>
+        <input id="daname" v-model="shipping_address.name">
+      </p>
+      <p>
+        <label for="datreet">Street</label>
+        <input id="datreet" v-model="shipping_address.street">
+      </p>
+      <p>
+        <label for="dacity">City</label>
+        <input id="dacity" v-model="shipping_address.city">
+      </p>
+      <p>
+        <label for="datate">State</label>
+        <select id="datate" v-model="shipping_address.state">
+          <option value="vi">Victoria</option>
+        </select>
+      </p>
+      <p>
+        <label for="dapost">Postcode</label>
+        <input id="dapost" v-model="shipping_address.Postcode">
+      </p> 
+    </fieldset>
+    <!-- Delivery notes -->
+    <fieldset>
+        <div class="text_field">
+        <p>Delivery notes:</p>
+        <input type="text" name="delivery" placeholder="delivery">
+        </div>
+    </fieldset>
+  </form>
+    
+<!-- The payment form -->
+  <div class="col-50">
+    <h3>Payment</h3>
+    <label for="fname">Accepted Cards</label>
+    <!-- Icons -->
+    <div class="icon-container">
+      <i class="fa fa-cc-visa" style="color:navy;"></i>
+      <i class="fa fa-cc-mastercard" style="color:red;"></i>
+    </div>
+    <label for="cname">Name on Card</label>
+    <input type="text" id="cname" name="cardname" placeholder="First and last name">
+    <label for="ccnum">Credit card number</label>
+    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+    <label for="expmonth">Exp Month</label>
+    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+    <div class="row">
+      <div class="col-50">
+        <label for="expyear">Exp Year</label>
+        <input type="text" id="expyear" name="expyear" placeholder="2021">
+      </div>
+      <div class="col-50">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="542">
+      </div>
+    </div>
+    <div id="checkbox" class="check">
+        <input type="checkbox" id="checkbox" value="checkbox" v-model="checked" />
+        <label for="check">Check this box if you'd like to pay by cash</label>
+    </div>
+    <input type="submit" value="Pay now" class="btn">
+  </div>
+
+<!-- This is the block id's for the footer -->
+<div id="cont">
+    <div id="main">
+    </div>
+</div>
+
+<!--- This is the for the content inside the footer--->
+<footer id="footer">
+    <div class="center box">
+<!-- This is the map icon and the information -->
+        <div class="content">
+        <div class="Place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">Disney Foods, Australia</span>
+    </div>
+
+<!-- The phone logo and number in the footer -->
+        <div class="Phone">
+        <span class="fas fa-phone-alt"></span>
+            <span class="text">+0444444444</span>
+</div>
+
+<!-- Email logo and information in the footer -->
+    <div class="Email">
+    <span class="fas fa-envelope"></span>
+    <span class="text">DisneyFoods@disneyfoods.com</span>
+</div>
+</div>
+</div>
+
+<!-- Copyright logo and content in the footer -->
+<p>DisneyFoods.com | Designed by Joel Murphy-Dyer &copy; 2021</p>
+</footer>
+
+
+</body>
+<script src="checkout.js"></script>
+</html>
